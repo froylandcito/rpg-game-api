@@ -6,12 +6,11 @@ const knex = require('knex');
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'froy',
-        password: '',
-        database: 'rpgGame'
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
     }
 });
+
 
 const app = express();
 app.use(bodyParser.json());
