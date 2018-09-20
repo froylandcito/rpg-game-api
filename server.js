@@ -42,4 +42,4 @@ app.get('/', (req,res) => {
         .catch(err=> res.status(400).json('error getting characters'));
 });
 
-app.listen(4000);
+app.listen(process.env.PORT);
